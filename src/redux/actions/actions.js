@@ -2,7 +2,8 @@ import {
   ADD_SERVICE,
   REMOVE_SERVICE,
   EDIT_SERVICE,
-  CHANGE_SERVICE_FIELD
+  CHANGE_SERVICE_FIELD,
+  FILTER_SERVICE
 } from './types'
 
 export function addService(name, price) {
@@ -19,4 +20,8 @@ export function editService(service) {
 
 export function changeServiceField(service) {
   return { type: CHANGE_SERVICE_FIELD, payload: service }
+}
+
+export function filterService(filter) {
+  return { type: FILTER_SERVICE, payload: filter }
 }

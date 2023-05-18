@@ -15,8 +15,9 @@ export const ServiceAdd = () => {
   }
   const onSubmit = (evt) => {
     evt.preventDefault()
-    if (!item.id) dispatch(addService(item.name, item.price))
-    else dispatch(editService(item))
+    !item.id
+      ? dispatch(addService(item.name, item.price))
+      : dispatch(editService(item))
     dispatch(changeServiceField(false))
   }
 
